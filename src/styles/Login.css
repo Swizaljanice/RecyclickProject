@@ -1,0 +1,166 @@
+/* Navbar Background */
+.bg-body-tertiary {
+    background-color: #566B30 !important;
+    font-family: 'Times New Roman', Times, serif;
+    height: 120px;
+    padding: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .custom-brand {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .custom-brand:hover{
+    text-decoration: underline;
+    color: white;
+  }
+  
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Recyclick Card Styles */
+  .recyclick-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 300px;
+   border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for card effect */
+    text-align: center;
+    position: relative; /* Enable positioning */
+    top: -50px; /* Move upwards to overlap navbar */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  /* Recyclick Logo */
+  .recyclick-logo {
+    width: 30px;
+    height: 30px;
+   
+  }
+  
+  /* Recyclick Text */
+  .recyclick-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6c9645;
+    align-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .justify-content-center{
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+  }
+  
+  .email{
+    padding: 10px;
+    border-radius: 5px;
+    width: 500px;
+    border-color: rgb(217, 238, 182);
+}
+  
+.password{
+    padding: 10px;
+    border-radius: 5px;
+    width: 500px;
+    border-color: rgb(217, 238, 182);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.forgot {
+    color: #566B30;
+    display: block;
+    text-align: right;
+}
+
+.login{
+    display: block;
+    align-items: center;
+    align-content: center;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #566B30;
+    color: white;
+    font-size: 20px;
+}
+
+.login:hover{
+    background-color: #5b693f;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .line {
+    flex: 1;
+    border: none;
+    border-top: 2px solid black !important;
+    margin: 0 10px;
+    
+  }
+  hr {
+    all: unset;
+  }
+  
+  
+  .text {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .login-with{
+    text-align: center;
+    font-weight: bold;
+  }
+
+ 
+.logo-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 200px; 
+  }
+
+  .iphone, .google, .linkedin {
+    font-size: 2rem; 
+    cursor: pointer; 
+  }
+
+  .account{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .sign-up{
+    color: #566B30;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  .sign-up:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
