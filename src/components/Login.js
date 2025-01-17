@@ -14,6 +14,9 @@ const navigate = useNavigate();
 const handleBack = () =>{
     navigate('/')
 }
+const handleNext = () =>{
+  navigate("/signup")
+}
 const style={color:"white", fontSize:"1.5em"}
 
 
@@ -63,7 +66,7 @@ const style={color:"white", fontSize:"1.5em"}
     </div>
     <br/>
     <p className="account">Don't Have An Account?</p>
-    <p className="sign-up">Sign Up</p>
+    <p className="sign-up" onClick={handleNext}>Sign Up</p>
     </form>
     
     
