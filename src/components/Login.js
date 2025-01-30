@@ -9,72 +9,65 @@ import { IoLogoApple } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-const Login =()=>{
-const navigate = useNavigate();
-const handleBack = () =>{
-    navigate('/')
-}
-const handleNext = () =>{
-  navigate("/signup")
-}
-const style={color:"white", fontSize:"1.5em"}
+const Login = () => {
+    const navigate = useNavigate();
+    const handleBack = () => {
+        navigate('/')
+    }
+    const handleNext = () => {
+        navigate("/signup")
+    }
+    const style = { color: "white", fontSize: "1em" }
 
+    return (
+        <div className="login-page">
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand onClick={handleBack} className="custom-brand">
+                        <FaArrowAltCircleLeft onClick={handleBack} style={style} /> Back
+                    </Navbar.Brand>
+                    <Navbar.Collapse className="justify-content-center">
+                        <Navbar.Text>
+                            <h2>Login</h2>
+                        </Navbar.Text>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
-    return(
-        <div>
-  <Navbar className="bg-body-tertiary">
-    <Container>
-        <Navbar.Brand onClick={handleBack} className="custom-brand">
-        <FaArrowAltCircleLeft onClick={handleBack} style={style} /> Back
-      </Navbar.Brand>
-    <Navbar.Collapse className="justify-content-center">
-        <Navbar.Text>
-          <h1>Login</h1>
-        </Navbar.Text>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
- <br/>
-  <div className="recyclick-card">
-    
-    <p className="recyclick-text"><img src={logo} alt="Brand Logo" className="recyclick-logo" /> Recyclick</p>
-  </div>
-  <div className="container">
-    <form>
-        <input type="email" placeholder="Email" className="email"/>
-        <br/>
-        <br/>
-        <input type="password" placeholder="Password" className="password"/>
-        <br/>
-        <br/>
-        <a href="#" className="forgot">Forgot Password?</a>
-        <br/>
-        <button className="login">Login</button>
-        <br/>
-        <div className="divider-container">
-      <hr className="line" />
-      <span className="text">or</span>
-      <hr className="line" />
-    </div>  
-    <br/>
-    <p className="login-with">Login with</p>
-    <br/>
-    <div className="logo-container">
-      <IoLogoApple className="iphone" />
-      <FcGoogle className="google" />
-      <IoLogoLinkedin className="linkedin" />
-    </div>
-    <br/>
-    <p className="account">Don't Have An Account?</p>
-    <p className="sign-up" onClick={handleNext}>Sign Up</p>
-    </form>
-    
-    
-  </div>
-  
-</div>
+            <div className="recyclick-card">
+                <p className="recyclick-text">
+                    <img src={logo} alt="Brand Logo" className="recyclick-logo" /> Recyclick
+                </p>
+            </div>
 
+          
+            <div className="form-container">
+                <form>
+                    <input type="email" placeholder="Email" className="email" />
 
+                    <input type="password" placeholder="Password" className="password" />
+                    <a href="#" className="forgot">Forgot Password?</a>
+                    <button className="login">Login</button>
+
+                    <div className="divider-container">
+                        <hr className="line" />
+                        <span className="text">or</span>
+                        <hr className="line" />
+                    </div>
+
+                    <p className="login-with">Login with</p>
+
+                    <div className="logo-container">
+                        <IoLogoApple className="iphone" />
+                        <FcGoogle className="google" />
+                        <IoLogoLinkedin className="linkedin" />
+                    </div>
+
+                    <p className="account">Don't Have An Account?</p>
+                    <p className="sign-up" onClick={handleNext}>Sign Up</p>
+                </form>
+            </div>
+        </div>
     );
 }
 

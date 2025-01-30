@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Signup.css";
 import { useNavigate } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { IoLogoApple } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
@@ -12,59 +14,55 @@ const Signup = () => {
   const handleBack = () => {
     navigate("/login");
   };
-
+  const handleNext = () =>{
+    navigate("/verification");
+  };
   return (
-    <div className="signup-container">
-      <div className="navbar">
-        <div className="back-button" onClick={handleBack}>
-          <FaArrowAltCircleLeft className="back-icon" /> Back
-        </div>
-        <h1>SignUp</h1>
+    <div className="signup-page">
+      <Navbar className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand onClick={handleBack} className="custom-brand">
+            <FaArrowAltCircleLeft className="back-icon" />Back
+          </Navbar.Brand>
+          <Navbar.Collapse className="justify-content-center">
+            <Navbar.Text>
+              <h2>Sign Up</h2>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      
+      <div className="recyclick-card">
+        <p className="recyclick-text">
+          <img src={logo} alt="Recyclick Logo" className="recyclick-logo" /> Recyclick
+        </p>
       </div>
-      <div className="signup-card">
-        <img src={logo} alt="Recyclick Logo" className="signup-logo" />
-        <p className="signup-title">Recyclick</p>
-        <form>
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="signup-input"
-          />
-          <input
-            type="text"
-            placeholder="Contact Number"
-            className="signup-input"
-          />
-          <div className="password-field">
-            <input
-              type="password"
-              placeholder="Password"
-              className="signup-input"
-            />
-          </div>
-          <div className="password-field">
-            <input
-              type="password"
-              placeholder="Re Enter Password"
-              className="signup-input"
-            />
-          </div>
-          <button type="button" className="signup-button">
-            Signup
-          </button>
+
+      
+      <div className="container form-container">
+        <form className="signup-form">
+          <input type="text" placeholder="Full Name" className="signup-input" />
+          <input type="text" placeholder="Contact Number" className="signup-input" />
+          <input type="password" placeholder="Password" className="signup-input" />
+          <input type="password" placeholder="Re-enter Password" className="signup-input" />
+          <button type="button" className="signup-button" onClick={handleNext}>Sign Up</button>
+
+          
           <div className="divider-container">
             <hr className="line" />
             <span className="text">Or</span>
             <hr className="line" />
           </div>
-          <p className="signup-with">Signup With</p>
+
+          <p className="signup-with">Sign Up With</p>
           <div className="logo-container">
             <IoLogoApple className="social-logo" />
             <FcGoogle className="social-logo" />
             <IoLogoLinkedin className="social-logo" />
           </div>
           <p className="already-account">
-            Already Have An Account? <span className="login-link">Login</span>
+            Already have an account? <span className="login-link" onClick={handleBack}>Login</span>
           </p>
         </form>
       </div>

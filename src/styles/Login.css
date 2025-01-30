@@ -1,3 +1,9 @@
+h2{
+  color: white;
+}
+.login-page{
+  font-family: 'Times New Roman', Times, serif;
+}
 .bg-body-tertiary {
   background-color: #566B30 !important;
   font-family: 'Times New Roman', Times, serif;
@@ -5,14 +11,15 @@
   padding: 10px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+ 
 }
 
 .custom-brand {
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
 }
 
-.custom-brand:hover{
+.custom-brand:hover {
   text-decoration: underline;
   color: white;
 }
@@ -23,85 +30,81 @@ h1 {
   margin: 0;
 }
 
-/* Recyclick Card Styles */
 .recyclick-card {
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
   width: 300px;
- border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for card effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* Enable positioning */
-  top: -50px; /* Move upwards to overlap navbar */
-  margin: 0 auto; /* Center horizontally */
+  position: relative;
+  top: -30px; 
+  margin: 0 auto;
+  padding: 10px; 
 }
 
-/* Recyclick Logo */
+
 .recyclick-logo {
   width: 30px;
   height: 30px;
- 
 }
 
-/* Recyclick Text */
 .recyclick-text {
   font-size: 1.5em;
   font-weight: bold;
   color: #6c9645;
-  align-content: center;
-  align-items: center;
   padding-top: 10px;
 }
 
-.justify-content-center{
-  justify-content: center;
-  align-items: center;
-  margin-right: 60px;
-}
 
-.email{
-  padding: 10px;
-  border-radius: 5px;
-  width: 500px;
-  border-color: rgb(217, 238, 182);
-}
-
-.password{
-  padding: 10px;
-  border-radius: 5px;
-  width: 500px;
-  border-color: rgb(217, 238, 182);
-}
-
-.container{
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
 }
+
+
+.email, .password {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid rgb(217, 238, 182);
+  margin-bottom: 15px;  
+}
+
+
 
 .forgot {
   color: #566B30;
   display: block;
   text-align: right;
+  margin-bottom: 15px; 
 }
 
-.login{
-  display: block;
-  align-items: center;
-  align-content: center;
-  width: 500px;
+
+
+.login {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   background-color: #566B30;
   color: white;
   font-size: 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.login:hover{
+.login:hover {
   background-color: #5b693f;
 }
 
@@ -117,49 +120,72 @@ h1 {
   border: none;
   border-top: 2px solid black !important;
   margin: 0 10px;
-  
-}
-hr {
-  all: unset;
 }
 
 
-.text {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.login-with{
+.login-with {
   text-align: center;
   font-weight: bold;
 }
 
-
 .logo-container {
-  display: flex; 
-  align-items: center; 
-  justify-content: flex-start; 
-  gap: 200px; 
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .iphone, .google, .linkedin {
-  font-size: 2rem; 
-  cursor: pointer; 
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.account{
+
+.account {
   text-align: center;
   font-weight: bold;
 }
 
-.sign-up{
+
+.sign-up {
   color: #566B30;
   text-align: center;
   font-weight: bolder;
   font-size: larger;
 }
 
-.sign-up:hover{
+.sign-up:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .bg-body-tertiary {
+    height: 100px;
+    padding: 5px;
+  }
+
+  .custom-brand {
+    font-size: 1em;
+  }
+
+  .recyclick-card {
+    width: 90%;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .email, .password {
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+  }
+
+  .logo-container {
+    gap: 50px;
+  }
 }
