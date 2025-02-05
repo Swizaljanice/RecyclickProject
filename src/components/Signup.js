@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Signup.css";
 import { useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
@@ -11,17 +11,29 @@ import logo from "../images/logo.png";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const handleBack = () => {
-    navigate("/login");
+  const [fullName, setFullName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
+
+  const handleSignup = () => {
+    if (
+      fullName === "Recyclick" &&
+      contactNumber === "123456789" &&
+      password === "recyclick123" &&
+      rePassword === "recyclick123"
+    ) {
+      navigate("/verification");
+    } else {
+      alert("Invalid credentials! Please enter the correct details.");
+    }
   };
-  const handleNext = () =>{
-    navigate("/verification");
-  };
+
   return (
     <div className="signup-page">
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand onClick={handleBack} className="custom-brand">
+          <Navbar.Brand onClick={() => navigate("/login")} className="custom-brand">
             <FaArrowAltCircleLeft className="back-icon" />Back
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-center">
@@ -32,23 +44,46 @@ const Signup = () => {
         </Container>
       </Navbar>
 
-      
       <div className="recyclick-card">
         <p className="recyclick-text">
           <img src={logo} alt="Recyclick Logo" className="recyclick-logo" /> Recyclick
         </p>
       </div>
 
-      
       <div className="container form-container">
         <form className="signup-form">
-          <input type="text" placeholder="Full Name" className="signup-input" />
-          <input type="text" placeholder="Contact Number" className="signup-input" />
-          <input type="password" placeholder="Password" className="signup-input" />
-          <input type="password" placeholder="Re-enter Password" className="signup-input" />
-          <button type="button" className="signup-button" onClick={handleNext}>Sign Up</button>
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            className="signup-input" 
+            value={fullName} 
+            onChange={(e) => setFullName(e.target.value)} 
+          />
+          <input 
+            type="text" 
+            placeholder="Contact Number" 
+            className="signup-input" 
+            value={contactNumber} 
+            onChange={(e) => setContactNumber(e.target.value)} 
+          />
+          <input 
+            type="password" 
+            placeholder="Password" 
+            className="signup-input" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+          />
+          <input 
+            type="password" 
+            placeholder="Re-enter Password" 
+            className="signup-input" 
+            value={rePassword} 
+            onChange={(e) => setRePassword(e.target.value)} 
+          />
+          <button type="button" className="signup-button" onClick={handleSignup}>
+            Sign Up
+          </button>
 
-          
           <div className="divider-container">
             <hr className="line" />
             <span className="text">Or</span>
@@ -62,7 +97,7 @@ const Signup = () => {
             <IoLogoLinkedin className="social-logo" />
           </div>
           <p className="already-account">
-            Already have an account? <span className="login-link" onClick={handleBack}>Login</span>
+            Already have an account? <span className="login-link" onClick={() => navigate("/login")}>Login</span>
           </p>
         </form>
       </div>

@@ -9,6 +9,7 @@ const Verification = () => {
   const [timer, setTimer] = useState(60);
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [canResend, setCanResend] = useState(false);
+  const defaultOtp = ["0", "0", "0", "0"];
 
   useEffect(() => {
     if (timer > 0) {
@@ -35,7 +36,15 @@ const Verification = () => {
   const handleResendOtp = () => {
     setTimer(60);
     setCanResend(false);
-    
+    setOtp(["", "", "", ""]); 
+  };
+
+  const handleConfirm = () => {
+    if (otp.join("") === defaultOtp.join("")) {
+      navigate("/success");
+    } else {
+      alert("Invalid OTP. Please try again.");
+    }
   };
 
   return (
@@ -49,7 +58,6 @@ const Verification = () => {
         <p className="verification-title">Verification Code</p>
         <p className="verification-message">We have sent the verification code to your email address</p>
 
-        
         <div className="otp-box-container">
           {otp.map((digit, index) => (
             <input
@@ -63,15 +71,13 @@ const Verification = () => {
           ))}
         </div>
 
-        
         {canResend ? (
           <button className="resend-otp-button" onClick={handleResendOtp}>Resend OTP</button>
         ) : (
           <p className="otp-timer">Resend OTP in {timer}s</p>
         )}
 
-        
-        <button className="confirm-button">Confirm</button>
+        <button className="confirm-button" onClick={handleConfirm}>Confirm</button>
       </div>
     </div>
   );

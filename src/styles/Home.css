@@ -1,0 +1,307 @@
+/* General Wrapper to Make it Responsive */
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;  /* Reduced from 100vh */
+    background-color: #f5f5f5;
+    padding: 5px; /* Reduced padding */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main Container */
+.home-container {
+    width: 100%;
+    max-width: 350px; 
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    background-color: #5a6f3b;
+    color: white;
+    padding: 30px 20px;  /* Reduced padding to shrink height */
+    border-bottom-left-radius: 100px;
+    
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 18px; /* Slightly smaller */
+}
+.amazon{
+    color: #5a6f3b;
+    font-weight: bold;
+    font-size: 17px;
+}
+h5{
+    font-size: 12px;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 22px; /* Slightly smaller */
+}
+.bell-icon {
+    font-size: 1.8em;
+}
+.timer-icon{
+    font-size: 1.5em;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Added space between icons */
+}
+.recycle-icon{
+    font-size: 2.5em;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.wallet-icon{
+    font-size: 2.5em;
+    color: #5a6f3b;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.icon {
+    margin: 0 8px; /* Reduced margin */
+    font-size: 16px; /* Slightly smaller */
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 45px; /* Increased size */
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Overlapping Cards */
+.overlap-section {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -25px;  /* Moved up slightly */
+}
+
+.card {
+    width: 45%;
+    padding: 12px; /* Smaller padding */
+    border-radius: 10px;
+    font-size: 14px; /* Smaller font */
+    font-weight: bold;
+    text-align: center;
+}
+
+.recycle-card {
+    background-color: #5a6f3b;
+    color: white;
+}
+.wallet-card{
+    background-color: #E7F3EF;
+}
+.reward-card {
+    background-color: white;
+    color: black;
+}
+.cash-voucher{
+    background-image: url('https://s3-alpha-sig.figma.com/img/8f9c/72ad/587cfbc99820a0b025fb210d4b6f000f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=aE73KYrXqv8~fasFHxqOuRh6I2UNYiWXufTXgzRxae4JP0O1~ayam9SWapq80j3P73-IDV~2wcn8PAXVvn~Be31ZJLWlX9Yklu~DLGQyfmJkn8qO21ZYVdKZZ78ksejRE1cgA2pXa-4mA7~GJPMrzCoHKHl0Y2egTZn88FeT0GUs-XZC7E6yKjZhUlHULS4K~oYKgWRrXmECBPUaKLKspmIbA3AikInv29aUYDkS-zph7ZVeRtzNvB3yXw~xUXJC~ARMRsfMOIN9ffDTgHPKX66mMBMOa0WIh6nJmVQqDWvnz3W~wJKlCR~bw2CK2yhfyebXh1hr4q6GCU2u3N~Ngw__');
+    background-size: contain;
+}
+.cash-voucher p{
+    color: white;
+}
+
+/* Weather & Air Quality */
+.weather-card {
+    background-image: url('https://s3-alpha-sig.figma.com/img/8ddd/bc02/83b3af2cf05d156584f72b3d4b4fd2bc?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CGWgxxBqrQeCAm4q2Gqhj7Rxq8L09Z6NXfnNynBnNiJ1tp~5HtujPB0Qt4HZWx~x0jeCEMCv5qEHDr49XxV3IHWZOuy1p0GripMwNsJPO19poeUolYWyU8ASPXQiuAIZVhMLPCCImif-lwr7-DERDiFTT8fUrxCLhDBo60MT~EqEvOZyU9a~ASa3g604HyBOL1ujQVr08rEtKX8NF~Y~zQQHxDVRNjqCWgapZ5VhFpkLxSMDBqdXbAqE-Bt58qH20Z1t6bSv~UhJu5u1~OdDI~oj35M0wma0gzOqbAuVA8It6usDnYdvsPtcP8cY3d12DkKVs0swUT3BGbohKGzSQg__');
+    margin: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: -15px; 
+    margin-bottom: 20px; 
+}
+.weather-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.air-quality h1 {
+    font-size: 50px; /* Reduced */
+    margin: 0;
+}
+.air{
+    font-size: 10px;
+}
+.air-quality p{
+    color: white;
+
+}
+
+.weather-info p {
+    margin: 0; 
+    color: white;
+}
+.chennai{
+    font-size: 10px;
+    padding-left: 80px;
+}
+
+.location{
+    color: white;
+}
+
+.reward-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    margin-top: -15px;
+    margin-bottom: 20px; /* Added gap below reward cards */
+}
+
+
+.reward-card {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    width: 45%;
+    text-align: center;
+    margin-top: -10px; /* Move reward cards up */
+    border-radius: 10px;
+}
+
+.amazon-card img {
+    width: 40%; 
+}
+
+
+.fashion-sale {
+    background-color: whitesmoke;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 20px; /* Added gap below the fashion sale section */
+}
+.fashion-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: -15px; /* Shift the whole fashion sale section up */
+}
+
+.fashion-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center; /* Centering the images */
+}
+
+.fashion-box {
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px; /* Shift images up */
+}
+
+.fashion-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shift-down {
+    margin-top: 20px; /* Adjust this value for fine-tuning */
+}
+.red-text {
+    color: red;
+    font-size: 12px; 
+}
+
+
+.shop-now {
+    background-color: #5a6f3b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 8px; /* Smaller size */
+    padding: 4px 5px; /* Adjust padding for a smaller button */
+    margin-top: 15px; /* Ensures the button is below the "Right to fashion sale" text */
+    width:80px;
+    height: 20px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #E7F3EF;
+    border-radius: 20px;  /* Apply rounded corners on all sides */
+    width: 100%;  /* Ensure it spans the entire width */
+    position: relative;
+    top: -10px; /* Keep the shift up */
+    border: 2px solid #416443; /* Outline color */
+    padding: 4px 0;  /* Reduced padding to make the height smaller */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    height: 50px;  /* Explicit height for more control */
+    align-items: center; /* Vertically center the nav buttons */
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 20px; /* Adjust font size as needed */
+    cursor: pointer;
+    color: #5a6f3b;
+    align-self: center; /* Align each button to the center */
+    margin-top: -3px; /* Move the button slightly up */
+}
+
+
+
+/* 📱 Responsive Styles */
+@media (min-width: 600px) {
+    .header {
+        padding: 35px 20px;  /* Kept small */
+    }
+}
+
+@media (min-width: 768px) {
+    .home-container {
+        max-width: 380px; /* Slightly larger */
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 40px 20px;  /* Still small */
+    }
+}
